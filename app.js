@@ -11,5 +11,7 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/user", profileRoutes);
 
+app.use("/test", (req, res) => res.send("hiii test"));
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
